@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body style="background-image : url('/Content/images/students.gif');padding-top: 120px ; max-height:100vh">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Student Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-page="/Students/Index">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-page="/Courses/Index">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-page="/Enrollments/Index">Enrollments</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-page="/Results/Index">Results</a>
+                    </li>
+
+
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <partial name="_CookieConsentPartial" />
+    <div class="container  bg-white" style="height:100vh" >
+        @RenderBody()
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div id="footer" class="container-fluid py-5 bg-info">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="~/Content/js/scrolling-nav.js"></script>
+    @RenderSection("Scripts", required: false);
+</body>
+
+</html>

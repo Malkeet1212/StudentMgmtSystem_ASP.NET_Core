@@ -1,0 +1,37 @@
+﻿@page
+@model Student_Management.Pages.Enrollments.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Enrollment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Enrollment.Course)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enrollment.Course.CourseSerialId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enrollment.Student)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enrollment.Student.StudentSerialId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enrollment.Semester)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enrollment.Semester)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-primary" asp-page="./Edit" asp-route-id="@Model.Enrollment.Id">Edit</a> |
+  
+</div>
